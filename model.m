@@ -11,9 +11,3 @@ ds = create_imagedatastore(flabels, "./Data");
 
 [train, test] = splitEachLabel(ds, 0.9);
 
-function Z = create_imagedatastore(labels, location)
-
-    imds = imageDatastore(location);
-    imds.Labels = labels;
-    Z = imds;
-end
